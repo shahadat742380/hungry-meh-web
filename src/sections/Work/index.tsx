@@ -59,7 +59,7 @@ const Work = () => {
         <div className="mt-[60px] grid grid-cols-1 lg:grid-cols-3 items-center gap-10 md:gap-14 lg:gap-16">
           <div className="flex flex-col gap-y-16 md:gap-y-20 lg:gap-y-[150px]">
             {cardData.slice(2).map((data, idx) => (
-              <div key={idx}>
+              <div key={idx} className="max-w-[355px] mx-auto">
                 <div className="flex justify-center">
                  {data.img}
                 </div>

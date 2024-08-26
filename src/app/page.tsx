@@ -11,6 +11,9 @@ import Partner from "@/sections/partner";
 import Faq from "@/sections/Faq";
 import ClientReview from "@/sections/ClientReview";
 import Steps from "@/sections/steps";
+import Feature from "@/sections/features";
+import Feature2 from "@/sections/features/Feature2";
+import Feature3 from "@/sections/features/Feature3";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
       <AboutUs />
       <WhyHungry />
       <Work />
+      <Feature />
+      <Feature2 />
+      <Feature3 />
       <Steps />
       <ClientReview />
       <Faq />

@@ -1,35 +1,51 @@
 /* eslint-disable react/no-unescaped-entities */
-import BtnPrimary from "@/components/ui/BtnPrimary";
+
+// import core package
 import Image from "next/image";
+
+// import component
+import BtnPrimary from "@/components/ui/BtnPrimary";
+
+// import images
+import rightImg from "@/assets/images/steps/step-right-img.png";
+import { Typography } from "@/components/ui/Typography";
 
 const Steps = () => {
   return (
-    <section className="py-10 bg-white_ sm:py-16 lg:py-24">
-      <div className="w-[95%] xl:max-w-7xl mx-auto">
-        <div className=" mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl font-Georgia tracking-wide">
-            Heading
-          </h2>
-          <p className="mt-4 text-base font-normal leading-7 text-gray-600 font-oracle">
-            subHeading
-          </p>
-        </div>
-        <div className="grid items-center md:grid-cols-2 md:gap-x-20 gap-y-10 mt-10 lg:mt-16">
-          <div className="relative md:order-3 w-full">
+    <section className="py-16 lg:pt-32 lg:pb-24 md:py-20 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-x-[130px] gap-y-10 mt-10 lg:mt-16">
+          <div className="relative lg:order-2 order-1">
             <div className="overflow-hidden w-full h-full rounded-[10px]">
-              {/* <Image
+              <Image
                 className="object-contain w-full h-full !rounded-[10px]"
-                src={img}
-                alt=""
-              /> */}
+                src={rightImg}
+                alt="Image"
+                height={572}
+                width={691}
+              />
             </div>
           </div>
 
-          <div className="md:order-1 font-oracle">
-            <ul className="mx-auto mt-16 space-y-10">
+          <div className="w-full lg:w-[35%] lg:order-1 order-2">
+            <div>
+              <Typography variant="SemiBold_H3" className="block">
+                Lorem ipsum dolor sit amet{" "}
+                <span className="text-primary">consectetur.</span>{" "}
+              </Typography>
+              <Typography
+                variant="Regular_H6"
+                className="block text-description mt-6"
+              >
+                Provide your guest with a quick and easy way to pay for meals
+                and take-out orders.
+              </Typography>
+            </div>
+            <ul className="mx-auto mt-12 space-y-8">
               <li className="relative flex ">
                 <div
-                  className="- absolute mt-0.5 top-[43px] left-8 w-px border-l-2 border-primary border-dashed  h-full"
+                  className="absolute mt-0.5 top-[43px] left-8 w-px border-l-2 border-primary border-dashed  h-full"
                   aria-hidden="true"
                 ></div>
 
@@ -37,19 +53,14 @@ const Steps = () => {
                   <span className="mt-1">1</span>
                 </div>
                 <div className="ml-6">
-                  <h2 className="font-semibold text-black_ mt-1">
-                    Request a Quote
-                  </h2>
-                  <p className="text-black_">
-                    Get a quick, no-obligation quote tailored to your specific
-                    needs. Our transparent pricing ensures you know exactly what
-                    to expect.
-                  </p>
+                  <Typography variant="Regular_H6" className="block mt-2">
+                    Scan your QR code
+                  </Typography>
                 </div>
               </li>
               <li className="relative flex ">
                 <div
-                  className="- absolute mt-0.5 top-[43px] left-8 w-px border-l-2 border-primary border-dashed  h-full"
+                  className="absolute mt-0.5 top-[43px] left-8 w-px border-l-2 border-primary border-dashed  h-full"
                   aria-hidden="true"
                 ></div>
 
@@ -57,14 +68,24 @@ const Steps = () => {
                   <span className="mt-1">2</span>
                 </div>
                 <div className="ml-6">
-                  <h2 className="font-semibold text-black_ mt-1">
-                    Place Your Order
-                  </h2>
-                  <p className="text-black_">
-                    Once you're satisfied with the quote, placing an order is
-                    simple. Our team will then handle the logistics and ensure a
-                    seamless delivery process.
-                  </p>
+                  <Typography variant="Regular_H6" className="block mt-2">
+                    Check the bill ( and split it if needed)
+                  </Typography>
+                </div>
+              </li>
+              <li className="relative flex ">
+                <div
+                  className="absolute mt-0.5 top-[43px] left-8 w-px border-l-2 border-primary border-dashed  h-full"
+                  aria-hidden="true"
+                ></div>
+
+                <div className="ml-[13px] relative flex items-center justify-center flex-shrink-0 w-10 h-10 bg-primary rounded-full shadow font-oracle text-[18px] text-white">
+                  <span className="mt-1">3</span>
+                </div>
+                <div className="ml-6">
+                  <Typography variant="Regular_H6" className="block mt-2">
+                    Leave a tip
+                  </Typography>
                 </div>
               </li>
               <li className="relative flex ">
@@ -74,19 +95,21 @@ const Steps = () => {
                 ></div>
 
                 <div className="ml-[13px] relative flex items-center justify-center flex-shrink-0 w-10 h-10 bg-primary rounded-full shadow font-oracle text-[18px] text-white">
-                  <span className="mt-1">3</span>
+                  <span className="mt-1">4</span>
                 </div>
                 <div className="ml-6">
-                  <h2 className="font-semibold text-black_ mt-1">
-                    Focus on Your Project
-                  </h2>
-                  <p className="text-black_">step3</p>
+                  <Typography variant="Regular_H6" className="block mt-2">
+                    You'are done!
+                  </Typography>
                 </div>
               </li>
             </ul>
 
             <div className="mt-12">
-                <BtnPrimary content={"Started for Free demo"} className="font-semibold md:text-xl" />
+              <BtnPrimary
+                content={"Started for Free demo"}
+                className="font-semibold md:text-xl"
+              />
             </div>
           </div>
         </div>

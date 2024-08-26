@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <section
       id="aboutUs"
-      className="lg:aboutBg bg-no-repeat bg-contain  bg-left py-16 lg:pt-32 lg:pb-24 md:py-20 "
+      className="py-16 lg:pt-32 lg:pb-24 md:py-20 "
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-10 md:gap-20 md:grid-cols-2 items-center">
         <div className="flex justify-center">

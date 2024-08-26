@@ -21,6 +21,8 @@ import IcoCapterra from "./IcoCapterra";
 import IcoPlus from "./IcoPlus";
 import IcoMinus from "./IcoMinus";
 
+import IcoCheck from "./IcoCheck";
+
 export {
   Logo,
   IcoFacebook,
@@ -41,5 +43,6 @@ export {
   IcoGetApp,
   IcoTrustPilot,
   IcoMinus,
-  IcoPlus
+  IcoPlus,
+  IcoCheck
 };
