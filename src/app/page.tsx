@@ -9,19 +9,20 @@ import Impact from "@/sections/impact";
 import WhyHungry from "@/sections/WhyHngry";
 import Partner from "@/sections/partner";
 import Faq from "@/sections/Faq";
+import ClientReview from "@/sections/ClientReview";
+import Steps from "@/sections/steps";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
       <Partner />
       <AboutUs />
       <WhyHungry />
       <Work />
-      <Clinic />
-      <Impact />
-      <ExploreBlogs />
+      <Steps />
+      <ClientReview />
       <Faq />
+      <ExploreBlogs />
       <Banner />
     </main>
   );

@@ -9,6 +9,7 @@ import { Typography } from "@/components/ui/Typography";
 //  import icons
 import { FaRegWindowMinimize } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
+import { IcoMinus, IcoPlus } from "@/assets/svg";
 
 interface FaqProps {
   bgColor?: string;
@@ -20,9 +21,9 @@ const Faq: React.FC<FaqProps> = ({ bgColor }) => {
       question: "What will I learn in the Color for Creatives course?",
       answer:
         "Explore color theory fundamentals, practical applications, and techniques to create effective color palettes tailored for design projects.",
-      open: false,                                             
+      open: false,
     },
-    {    
+    {
       question: "Who is this course designed for?",
       answer:
         "Ideal for designers, artists, and anyone looking to enhance their understanding and use of color in professional and personal projects.",
@@ -35,7 +36,8 @@ const Faq: React.FC<FaqProps> = ({ bgColor }) => {
       open: false,
     },
     {
-      question: "What support is available if I have questions during the course?",
+      question:
+        "What support is available if I have questions during the course?",
       answer:
         "Learners can access our dedicated support team through email, forums, and scheduled live Q&A sessions for ongoing assistance.",
       open: false,
@@ -60,14 +62,21 @@ const Faq: React.FC<FaqProps> = ({ bgColor }) => {
     <section className=" overflow-hidden" style={{ backgroundColor: bgColor }}>
       <div className="px-4 py-20 md:pt-[120px] md:pb-20 mx-auto sm:px-6 lg:px-8 max-w-7xl  ">
         <div className="text-center">
-          <Typography variant="Medium_H3" className={` text-black block `}>
-          Frequently Asked Questions
+          <div className="flex items-center justify-center gap-2">
+            <div className="w-10 h-[1px] bg-primary"></div>
+            <Typography variant="Medium_H4" className="text-primary block ">
+              Lorem ipsum
+            </Typography>
+            <div className="w-10 h-[1px] bg-primary"></div>
+          </div>
+          <Typography variant="Medium_H3" className={` text-title block mt-2`}>
+            Frequently asked questions
           </Typography>
           <Typography
             variant="Regular_H6"
-            className="text-dark_gray block mt-3 mx-auto max-w-[700px]"
+            className="text-description block mt-3 mx-auto max-w-[700px]"
           >
-            Find answers to your questions about our courses, tools, and learning experiences.
+            Everything you need to know about the product and billing.
           </Typography>
         </div>
         <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
@@ -75,12 +84,12 @@ const Faq: React.FC<FaqProps> = ({ bgColor }) => {
             <div key={index}>
               <div
                 className={`${
-                  item.open ? "block border border-primary" : "border"
-                } transition-all duration-200 bg-white  cursor-pointer hover:bg-gray-50 rounded-md `}
+                  item.open ? "block border-b border-primary" : "border-b"
+                } transition-all duration-300 bg-white  cursor-pointer hover:bg-gray-50 `}
               >
                 <button
                   type="button"
-                  className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+                  className="flex items-center justify-between w-full py-5"
                   onClick={() => toggleFaq(index)}
                 >
                   <span
@@ -90,17 +99,13 @@ const Faq: React.FC<FaqProps> = ({ bgColor }) => {
                     {item.question}{" "}
                   </span>
 
-                  {!item.open ? (
-                    <FaPlus className="text-primary text-xl" />
-                  ) : (
-                    <FaRegWindowMinimize className="text-primary text-xl" />
-                  )}
+                  {!item.open ? <IcoPlus /> : <IcoMinus />}
                 </button>
 
                 <div
                   className={`${
                     item.open ? "block " : "hidden"
-                  } px-4 pb-5 sm:px-6 sm:pb-6 text-dark_gray `}
+                  }  pb-8   text-dark_gray `}
                 >
                   <p dangerouslySetInnerHTML={{ __html: item.answer }}></p>
                 </div>

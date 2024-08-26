@@ -23,7 +23,7 @@ const BtnPrimary: FC<ButtonProps> = ({
     <button
       {...rest} // Spread the rest of the native button props here
       className={cn(
-        'py-3 px-6 hover:bg-primary/90 rounded-lg text-base duration-500 bg-primary text-white ',
+        'py-3 px-6 hover:shadow-md hover:shadow-primary/50 rounded-lg text-base duration-500 bg-primary text-white ',
         className,
       )}
     >

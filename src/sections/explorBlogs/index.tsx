@@ -1,12 +1,14 @@
+// import core package
+import Image from "next/image";
+
+// import typography
 import { Typography } from "@/components/ui/Typography";
-import React from "react";
 
+// Import image
 import leftImg from "@/assets/images/exploreBlog/leftImg.png";
-
 import img1 from "@/assets/images/exploreBlog/blog1.png";
 import img2 from "@/assets/images/exploreBlog/blog2.png";
 import img3 from "@/assets/images/exploreBlog/blog3.png";
-import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -14,22 +16,20 @@ const ExploreBlogs = () => {
   const blogData = [
     {
       img: img1,
-      title: "Unlocking the Secrets of Better Health: Your Guide to Health.",
+      title: "Nonprofit Summit: Direct and Expand Your Programs Sessions",
     },
     {
       img: img2,
-      title:
-        "10 Essential Tips for Maintaining Your Health - A Healthcare Blog",
+      title: "Nonprofit Summit: Direct and Expand Your Programs Sessions",
     },
     {
       img: img3,
-      title:
-        "The Ultimate Guide to Wellness: Your Go-To Healthcare Blog Expert.",
+      title: "Nonprofit Summit: Direct and Expand Your Programs Sessions",
     },
   ];
 
   return (
-    <section id="blog" className="bg-sky_light py-10 md:py-16 lg:py-[120px]">
+    <section id="blog" className="bg-background py-10 md:py-16 lg:py-[120px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Typography variant="Medium_H3" className="block text-black">
@@ -37,15 +37,15 @@ const ExploreBlogs = () => {
           </Typography>
           <Typography
             variant="Regular_H6"
-            className="block text-dark_gray mt-3"
+            className="block text-description mt-3"
           >
-            Look no further! Our Blogs will keep you up-to-date!
+            Lorem Ipsum is simply dummy text
           </Typography>
         </div>
         <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 items-start gap-10">
           {/* Left blog */}
           <div>
-            <div className="group">
+            <div className="group cursor-pointer">
               <div className="overflow-hidden w-full rounded-xl">
                 <Image
                   src={leftImg}
@@ -57,8 +57,7 @@ const ExploreBlogs = () => {
               </div>
               <div className="mt-6">
                 <Typography variant="Medium_H4" className="block text-black">
-                  Discover expert insights and practical tips on holistic
-                  healthcare in our innovation.
+                  Nonprofit Summit: Direct and Expand Your Programs Sessions
                 </Typography>
                 <Typography
                   variant="Regular_H6"
@@ -75,7 +74,7 @@ const ExploreBlogs = () => {
             {blogData.map((data, idx) => (
               <div
                 key={idx}
-                className="grid grid-cols-5 gap-8 items-start group w-full"
+                className="grid grid-cols-5 gap-8 items-start group w-full cursor-pointer"
               >
                 <div className=" col-span-2 overflow-hidden rounded-lg h-[204px] ">
                   <Image

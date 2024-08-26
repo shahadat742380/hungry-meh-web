@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 // import core package
 import Image from "next/image";
@@ -10,50 +10,48 @@ import bg from "@/assets/images/banner/bannerBg.png";
 import { Typography } from "@/components/ui/Typography";
 
 // import jotai
-import { useSetAtom } from 'jotai'
-import { openModalAtom } from '@/app/jotaiStore'
+import { useSetAtom } from "jotai";
+import { openModalAtom } from "@/app/jotaiStore";
+import BtnPrimary from "../ui/BtnPrimary";
 
 const Banner = () => {
-  const setOpenModal = useSetAtom(openModalAtom)
+  const setOpenModal = useSetAtom(openModalAtom);
 
   return (
-    <section className="relative overflow-hidden bg-black py-10 sm:py-16 lg:py-24 xl:py-32">
+    <section className="relative overflow-hidden bg-black py-10 md:py-16 lg:pt-20 lg:pb-[106px]">
       <div className="absolute inset-0">
         <Image
           src={bg}
           alt="Background image"
-          className="h-full w-full object-cover object-right  md:origin-top-left"
+          className="h-full w-full object-cover object-center"
           placeholder="blur"
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r  from-primary via-primary/80 to-transparent w-[90%] "></div>
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[400px]">
+        <div className="max-w-[800px] mx-auto text-center">
           <Typography
-            variant="Medium_H3"
+            variant="Medium_H2"
             className={`block leading-tight text-white `}
           >
-            Experience our product firsthand!
+            Lorem ipsum dolor sit amet consectetur.
           </Typography>
           <Typography
             variant="Regular_H5"
-            className="mt-4 block max-w-[470px] text-white"
+            className="mt-4 block max-w-[470px] mx-auto text-center text-white"
           >
-            Revolutionize your hospital operations with our cutting-edge
-            management tool - schedule a product demo today for a seamless
-            experience!
+            Clarity gives you the blocks & components you need to create a truly
+            professional website.
           </Typography>
 
-          <div className="mt-10 flex gap-4">
-            <button
-            onClick={() => {
-              setOpenModal(true)
-            }}
-            className="py-[14px] px-6 rounded-lg bg-white text-black text-base md:text-xl font-semibold">
-              Connect With Us
-            </button>
+          <div className="mt-10 flex justify-center">
+            <BtnPrimary
+              content={"Contact us"}
+              onClick={() => {
+                setOpenModal(true);
+              }}
+              className="bg-white text-black font-medium"
+            />
           </div>
         </div>
       </div>

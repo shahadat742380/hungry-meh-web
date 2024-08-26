@@ -20,8 +20,28 @@ html {
   .clinicBg {
     background-image: url(../assets/images/clinic/clinicBg.png);
   }
-  
-  
+}
+
+
+/* react-multi-carousel related style */
+.react-multi-carousel-dot button {
+  width: 32px !important;
+  height: 5px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: #FFF !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #FE724C !important;
+}
+
+.brands .react-multi-carousel-list {
+  height: 200px;
+}
+
+.review .react-multi-carousel-list {
+  overflow: hidden !important;
 }
 
 /* phone input */
@@ -51,11 +71,6 @@ html {
   top: -5px !important;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
   align-items: center !important;
 }
-
-
-
-
-

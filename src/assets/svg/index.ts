@@ -18,6 +18,9 @@ import IcoGetApp from "./IcoGetApp";
 import IcoProductHunt from "./IcoProductHunt";
 import IcoCapterra from "./IcoCapterra";
 
+import IcoPlus from "./IcoPlus";
+import IcoMinus from "./IcoMinus";
+
 export {
   Logo,
   IcoFacebook,
@@ -37,4 +40,6 @@ export {
   IcoProductHunt,
   IcoGetApp,
   IcoTrustPilot,
+  IcoMinus,
+  IcoPlus
 };

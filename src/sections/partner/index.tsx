@@ -89,13 +89,6 @@ const Partner = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className="flex flex-grow gap-20 justify-center items-center mt-14">
-          <Image src={img1} alt="img" />
-          <Image src={img2} alt="img" />
-          <Image src={img3} alt="img" />
-          <Image src={img4} alt="img" />
-          <Image src={img5} alt="img" />
-        </div> */}
       </div>
     </section>
   );
