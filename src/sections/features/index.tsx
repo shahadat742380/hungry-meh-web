@@ -1,8 +1,13 @@
+// import core package
+import Image from "next/image";
+
+// import image and icon
 import img from "@/assets/images/feature/qr.png";
 import { IcoCheck } from "@/assets/svg";
+
+// import components
 import BtnPrimary from "@/components/ui/BtnPrimary";
 import { Typography } from "@/components/ui/Typography";
-import Image from "next/image";
 
 const Feature = () => {
   return (

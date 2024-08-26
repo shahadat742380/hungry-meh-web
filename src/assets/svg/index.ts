@@ -17,6 +17,7 @@ import IcoG2 from "./IcoG2";
 import IcoGetApp from "./IcoGetApp";
 import IcoProductHunt from "./IcoProductHunt";
 import IcoCapterra from "./IcoCapterra";
+import IcoStar from "./IcoStar";
 
 import IcoPlus from "./IcoPlus";
 import IcoMinus from "./IcoMinus";
@@ -44,5 +45,6 @@ export {
   IcoTrustPilot,
   IcoMinus,
   IcoPlus,
-  IcoCheck
+  IcoCheck,
+  IcoStar
 };

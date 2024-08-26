@@ -11,32 +11,27 @@ import BtnPrimary from "@/components/ui/BtnPrimary";
 
 const Hero = () => {
   return (
-    <main id="home" className="pt-16 md:pt-20">
+    <main
+      id="home"
+      className="py-20 lg:py-[175px] bg-background border-b-primary border-b-[14px] "
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <Typography variant="Bold_H1" className="text-black block ">
-            Mind & Body. Balanced !
-          </Typography>
-          <Typography
-            variant="Regular_H5"
-            className="text-dark_gray block max-w-[764px] mx-auto mt-4"
-          >
-            Dopamine simplifies your health journey. Manage meds, connect with
-            doctors, and track progress - all in one place.
-          </Typography>
-          <div className="mt-10">
-            <BtnPrimary content={"Get Started"} />
+        <div className="max-w-[781px] mx-auto">
+          <div>
+            <div className="text-center">
+              <Typography variant="Bold_H1" className="block">
+                Time To Taste{" "}
+              </Typography>
+              <Typography variant="Bold_H1" className="block text-primary">
+                Delicious Food
+              </Typography>
+              <Typography variant="Medium_H5" className="block text-black/75 mt-6">
+                Lorem ipsum dolor sit amet consectetur. Eu sit non duis sed vel
+                enim vulputate dictum. Sagittis aliquam et interdum sed ut in eu
+                quam lobortis.
+              </Typography>
+            </div>
           </div>
-        </div>
-        <div className="mt-16">
-          <Image
-            height={700}
-            width={1280}
-            placeholder="blur"
-            src={img}
-            alt="bannerImg"
-            className="h-full w-full object-cover"
-          />
         </div>
       </div>
     </main>

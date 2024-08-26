@@ -101,7 +101,7 @@ export const Typography: FC<TypographyProps> = ({
       case 'SemiBold_H1':
       case 'Medium_H1':
       case 'Regular_H1':
-        fontSizeClass = 'text-[40px] md:text-[62px]'
+        fontSizeClass = 'text-[40px] md:text-[64px]'
         lineHeightClass = 'leading-tight md:leading-tighter'
         letterSpacingClass = 'tracking-tight'
         break

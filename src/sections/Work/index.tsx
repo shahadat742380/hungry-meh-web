@@ -7,12 +7,25 @@ import middleImg from "@/assets/images/work/mockup.png";
 
 // import ui
 import { Typography } from "@/components/ui/Typography";
-import { IcoQrRound, IcoTagging } from "@/assets/svg";
+import {
+  IcoCapterra,
+  IcoG2,
+  IcoGetApp,
+  IcoProductHunt,
+  IcoQrRound,
+  IcoStar,
+  IcoTagging,
+  IcoTrustPilot,
+} from "@/assets/svg";
 
 interface CardData {
   img: ReactNode;
   title: string;
   des: string;
+}
+interface RatingProps {
+  icon: ReactNode;
+  rating: string;
 }
 
 const Work = () => {
@@ -39,6 +52,29 @@ const Work = () => {
     },
   ];
 
+  const rattingData: RatingProps[] = [
+    {
+      icon: <IcoGetApp />,
+      rating: "4.6/5 Rating",
+    },
+    {
+      icon: <IcoProductHunt />,
+      rating: "4.6/5 Rating",
+    },
+    {
+      icon: <IcoG2 />,
+      rating: "4.6/5 Rating",
+    },
+    {
+      icon: <IcoCapterra />,
+      rating: "4.6/5 Rating",
+    },
+    {
+      icon: <IcoTrustPilot />,
+      rating: "4.6/5 Rating",
+    },
+  ];
+
   return (
     <section
       id="solution"
@@ -60,9 +96,7 @@ const Work = () => {
           <div className="flex flex-col gap-y-16 md:gap-y-20 lg:gap-y-[150px]">
             {cardData.slice(2).map((data, idx) => (
               <div key={idx} className="max-w-[355px] mx-auto">
-                <div className="flex justify-center">
-                 {data.img}
-                </div>
+                <div className="flex justify-center">{data.img}</div>
                 <Typography
                   variant="Medium_H4"
                   className="text-title block mt-4 text-center"
@@ -91,9 +125,7 @@ const Work = () => {
           <div className="flex flex-col gap-y-16 md:gap-y-20 lg:gap-y-[150px]">
             {cardData.slice(2).map((data, idx) => (
               <div key={idx}>
-                <div className="flex justify-center">
-                  {data.img}
-                </div>
+                <div className="flex justify-center">{data.img}</div>
                 <Typography
                   variant="Medium_H4"
                   className="text-black block mt-4 text-center"
@@ -109,6 +141,27 @@ const Work = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="max-w-[800px] mx-auto flex flex-wrap justify-center mt-[60px] ">
+          {rattingData.map((data, idx) => (
+            <div key={idx} className="px-4 py-3 text-center ">
+              <div className="mt-3 flex justify-center">{data.icon}</div>
+              <div className="flex gap-2 mt-3">
+                {[...Array(5)].map((starIdx) => (
+                  <div key={starIdx}>
+                    <IcoStar />
+                  </div>
+                ))}
+              </div>
+              <Typography
+                variant="Regular_H7"
+                className="mt-2 md:text-[13px] text-description"
+              >
+                {data.rating}
+              </Typography>
+            </div>
+          ))}
         </div>
       </div>
     </section>
